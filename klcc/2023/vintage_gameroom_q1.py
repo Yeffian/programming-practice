@@ -1,11 +1,11 @@
-defsolve(grid,size):
-lines=0
+def solve(grid,size):
+    lines=0
 
-x_ans=
-forringrid:
+    x_ans=0
+    for r in grid:
+        pass
 
-
-print(x_ans)
+    print(x_ans)
 
 grid=[
 [10110],

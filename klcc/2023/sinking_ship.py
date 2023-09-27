@@ -9,11 +9,10 @@ def solve(coords):
                 if n.isdigit():
                     prev_coords.append(int(n))
 
-    print(prev_coords)
-
 a = """
 2 3
 3 2
 10 10
 """
+
 solve(a)

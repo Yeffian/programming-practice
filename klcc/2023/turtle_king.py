@@ -2,18 +2,18 @@ n=437
 a=[1,1,1,1,1,1,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,0,0,0,1]
 
 
-defget_sublists(original_list,number_of_sub_list_wanted):
-sublists=list()
-forsub_list_countinrange(number_of_sub_list_wanted):
-sublists.append(original_list[sub_list_count::number_of_sub_list_wanted])
-returnsublists
+def get_sublists(original_list,number_of_sub_list_wanted):
+    sublists=list()
+    for sub_list_count in range(number_of_sub_list_wanted):
+        sublists.append(original_list[sub_list_count::number_of_sub_list_wanted])
+    return sublists
 
 quadrants=get_sublists(a,4)
 
 turtles_needed=0
-forquadrantinquadrants:
-ifquadrant.count(0)>=4:
-print(quadrant)
-turtles_needed+=1
+for quadrant in quadrants:
+    if quadrant.count(0)>=4:
+        print(quadrant)
+        turtles_needed+=1
 
 print(turtles_needed)
