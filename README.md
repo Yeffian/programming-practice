@@ -1,0 +1,3 @@
+## Competitve Programming Practise
+
+This repo contains all the programming problems I do for practice. It's mostly [Codewars](https://www.codewars.com/), and any competitions I do, (e.g KL Coding Cup). Word of advice, do not look in the folders for coding competitions that I have to *attend IRL*, because I'm not sure why but I just forget how to organise code and end up throwing 5 solutions in the same file, accidentally deleting files with solutions, and it ends up looking like a disaster. You've been warned.
