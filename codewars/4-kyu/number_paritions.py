@@ -6,7 +6,7 @@ def kelleher_sullivan_partitions(n):
     a = [1] * n
     y = -1
     v = n
-    while v > 0:
+    while v > 0:    
         v -= 1
         x = a[v] + 1
         while y >= 2 * x:
