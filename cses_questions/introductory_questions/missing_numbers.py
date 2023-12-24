@@ -1,11 +1,9 @@
 def missing_numbers(n, l):
-    full_range = list(range(1, n + 1))
-    sorted_list = list(sorted(l))
+    input_set = set(l)
+    true_set = set(list(range(1, n + 1)))
 
-    for num in full_range:
-        if num not in sorted_list:
-            print(num)
+    print(true_set.difference(input_set).pop())
 
 n = int(input())
 l = [int(num) for num in input().split()]
-missing_numbers(n,l)
+missing_numbers(n, l)
