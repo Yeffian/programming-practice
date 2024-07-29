@@ -22,7 +22,7 @@ def binarray(s)->int:
         else: 
             hash_map[curr_sum] = i  
          
-    for i in range (0, len(s)): 
+    for i in range(0, len(s)):
         if s[i] == -1: 
             s[i] = 0
         else: 
