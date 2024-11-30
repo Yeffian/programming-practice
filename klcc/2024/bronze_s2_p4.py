@@ -1,0 +1,12 @@
+def solve(s):
+    words = dict()
+
+    for word in s.split(' '):
+        if word not in words:
+            words[word] = len(word)
+
+    print(max(words, key=words.get))
+
+solve("Kuala Lumpur, officially the Federal Territory of Kuala Lumpur, and colloquially referred to as KL, is the capital city and a federal territory of Malaysia. It is the largest city in the country, covering an area of 243 km^2 with a census population of two million as of 2024. Greater Kuala Lumpur, also known as the Klang Valley, is an urban agglomeration of nine million people as of 2024. It is among the fastest growing metropolitan regions in Southeast Asia, both in population and economic development.")
+solve("They're creepy and they're kooky. Mysterious and spooky. They're all together ooky . The Addams family. Their house is a museum. When people come to see 'em, They really are a screaming. The Addams family. Neat Sweet Petite. So, put a witch's shawl on, A broomstick you can crawl on. We're gonna play a call on. The Addams family. They're creepy and they're kooky. Mysterious and spooky. They're all together ooky. The Addams family. Strange Deranged The Addams family")
+solve("Algorithms and data structures are central to computer science. The theory of computation concerns abstract models of computation and general classes of problems that can be solved using them. The fields of cryptography and computer security involve studying the means for secure communication and preventing security vulnerabilities . Computer graphics and computational geometry address the generation of images. Programming language theory considers different ways to describe computational processes, and database theory concerns the management of repositories of data. Human computer interaction investigates the interfaces through which humans and computers interact, and software engineering focuses on the design and principles behind developing software. Areas such as operating systems, networks and embedded systems investigate the principles and design behind complex systems. Computer architecture describes the construction of computer components and computer operated equipment. Artificial intelligence and machine learning aim to synthesize goal orientated processes such as problem solving, decision making, environmental adaptation, planning and learning found in humans and animals. Within artificial intelligence, computer vision aims to understand and process image and video data, while natural language processing aims to understand and process textual and linguistic data.")
