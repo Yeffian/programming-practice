@@ -1,17 +1,37 @@
-def number_spiral(x, y):
-    m = max(x, y)
-    square = (m - 1) * (m - 1)
-
-    if m % 2 == 0:
-        if x > y:
-            return square + y
+def number_spiral(Y, X):
+    # If Y is greater than X, implying Yth row is the outer boundary
+    if Y > X:
+        # Compute the area of the inner square
+        ans = (Y - 1) * (Y - 1)
+        # Check parity of Y to determine if numbers are in increasing or decreasing order
+        if Y % 2 != 0:
+            # Add X to the area if Yth row is odd
+            add = X
         else:
-            return (m * m) - x + 1
+            # Add 2*Y - X to the area if Yth row is even
+            add = 2 * Y - X
+        # Print the final result
+        print(ans + add)
+    # If X is greater than or equal to Y, implying Xth column is the outer boundary
     else:
-        if x > y:
-            return (m * m) - y + 1
+        # Compute the area of the inner square
+        ans = (X - 1) * (X - 1)
+        # Check parity of X to determine if numbers are in increasing or decreasing order
+        if X % 2 == 0:
+            # Add Y to the area if Xth column is even
+            add = Y
         else:
-            return square + x
+            # Add 2*X - Y to the area if Xth column is odd
+            add = 2 * X - Y
+        # Print the final result
+        return (ans + add)
 
 
-print(number_spiral(4, 2))
+n = int(input())
+ans = []
+for _ in range(n):
+    Y, X = map(int, input().split())
+    ans.append(number_spiral(Y, X))
+
+for a in ans:
+    print(a)
